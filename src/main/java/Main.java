@@ -15,9 +15,9 @@ public class Main {
         expense.setOrderid("1232");
 
 
-        JAXBContext context = JAXBContext.newInstance("generated");
+        JAXBContext context = JAXBContext.newInstance(ObjectFactory.class);
         Marshaller marshaller = context.createMarshaller();
-        marshaller.setProperty("jaxb.formatted.output",Boolean.TRUE);
-        marshaller.marshal(expense,System.out);
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);
+        marshaller.marshal(expense, System.out);
     }
 }
